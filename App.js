@@ -7,7 +7,7 @@ export default function App() {
     return (
         <View style={styles.container}>
             <Image source={icon} style={{ width: 100, height: 100 }} />
-            <Text>Hola como estas como esta el dia</Text>
+            <Text>Hola como estas como esta el dia prueba push desde windows casa</Text>
             <StatusBar style="auto" />
         </View>
     );
