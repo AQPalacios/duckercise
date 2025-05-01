@@ -1,8 +1,6 @@
 import { StyleSheet, View, FlatList } from 'react-native';
 import React from 'react'
 import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { Header } from './Header';
-import { Footer } from './Footer';
 import { VideoCard } from './VideoCard';
 
 const videos = [
@@ -61,15 +59,12 @@ export function Main() {
     const insets = useSafeAreaInsets();
     return (
         <View style={{ flex: 1, paddingTop: insets.top, paddingBottom: insets.bottom }}>
-            <Header />
             {/* Componente Scroll-video */}
             <FlatList
                 data={videos}
                 keyExtractor={(video) => video.id}
                 renderItem={({ item }) => <VideoCard video={item} />}
             />
-            <Footer />
-
         </View>
     )
 }

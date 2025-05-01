@@ -1,12 +1,7 @@
 import { Pressable, StyleSheet, Text, View } from "react-native";
 import React from "react";
-// import { HomeIcon } from "./HomeIcon";
-// import { PlusIcon } from "./PlusIcon";
-// import { GymIcon } from "./GymIcon";
-// import { UserIcon } from "./UserIcon";
 import { Link } from "expo-router";
 import { HomeIcon, PlusIcon, GymIcon, UserIcon } from "./Icons";
-// import Entypo from '@expo/vector-icons/Entypo';
 
 export function Footer() {
     return (
