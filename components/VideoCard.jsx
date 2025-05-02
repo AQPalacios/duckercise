@@ -2,7 +2,6 @@ import { StyleSheet, Text, View, Pressable, Image } from 'react-native'
 import React from 'react'
 import logo from "../assets/duckercise-logo.png"
 
-
 export function VideoCard({ video }) {
     return (
         <Pressable style={styles.componentVideo}>
@@ -11,7 +10,9 @@ export function VideoCard({ video }) {
                 flex: 3,
                 backgroundColor: "#FFFDFA"
             }}>
-                <Text>{video.imgVideo}</Text>
+                <Image source={video.imgVideo} style={{ width: "100%", height: "100%"}} />
+
+                {/* <Text>{video.imgVideo}</Text> */}
             </View>
             <View style={{
                 flex: 1,
@@ -21,7 +22,7 @@ export function VideoCard({ video }) {
                 padding: 8,
                 gap: 10
             }}>
-                <Image source={logo} style={{ width: 50, height: 50, borderRadius: 100 }} />
+                <Image source={video.imgChannel} style={{ width: 50, height: 50, borderRadius: 100 }} />
                 <View style={{
                     flex: 1,
                     justifyContent: 'space-evenly'

@@ -1,64 +1,78 @@
-import { StyleSheet, View, FlatList } from 'react-native';
-import React from 'react'
-import { useSafeAreaInsets } from 'react-native-safe-area-context';
-import { VideoCard } from './VideoCard';
+import { StyleSheet, View, FlatList } from "react-native";
+import React from "react";
+import { useSafeAreaInsets } from "react-native-safe-area-context";
+import { VideoCard } from "./VideoCard";
 
 const videos = [
     {
         id: "1",
-        imgVideo: "Imagen Video",
-        titleVideo: "Rutina de ejercicio para PRINCIPIANTES En Casa (20 Minutos) Empieza de cero a hacer ejercicio",
+        imgVideo: require("../assets/miniaturaVideo.png"),
+        titleVideo:
+            "Rutina de ejercicio para PRINCIPIANTES En Casa (20 Minutos) Empieza de cero a hacer ejercicio",
         uriVideo: "uriVideo",
-        imgChannel: "Imagen Canal",
+        imgChannel: require("../assets/imagenCanal.png"),
         nameChannel: "Chuy Almada",
     },
     {
         id: "2",
-        imgVideo: "Imagen Video",
-        titleVideo: "Rutina de ejercicio para PRINCIPIANTES En Casa (20 Minutos) Empieza de cero a hacer ejercicio",
+        imgVideo: require("../assets/miniaturaVideo.png"),
+        titleVideo:
+            "Rutina de ejercicio para PRINCIPIANTES En Casa (20 Minutos) Empieza de cero a hacer ejercicio",
         uriVideo: "uriVideo",
-        imgChannel: "Imagen Canal",
+        imgChannel: require("../assets/imagenCanal.png"),
         nameChannel: "Chuy Almada",
     },
     {
         id: "3",
-        imgVideo: "Imagen Video",
-        titleVideo: "Rutina de ejercicio para PRINCIPIANTES En Casa (20 Minutos) Empieza de cero a hacer ejercicio",
+        imgVideo: require("../assets/miniaturaVideo.png"),
+        titleVideo:
+            "Rutina de ejercicio para PRINCIPIANTES En Casa (20 Minutos) Empieza de cero a hacer ejercicio",
         uriVideo: "uriVideo",
-        imgChannel: "Imagen Canal",
+        imgChannel: require("../assets/imagenCanal.png"),
         nameChannel: "Chuy Almada",
     },
     {
         id: "4",
-        imgVideo: "Imagen Video",
-        titleVideo: "Rutina de ejercicio para PRINCIPIANTES En Casa (20 Minutos) Empieza de cero a hacer ejercicio",
+        imgVideo: require("../assets/miniaturaVideo.png"),
+
+        titleVideo:
+            "Rutina de ejercicio para PRINCIPIANTES En Casa (20 Minutos) Empieza de cero a hacer ejercicio",
         uriVideo: "uriVideo",
-        imgChannel: "Imagen Canal",
+        imgChannel: require("../assets/imagenCanal.png"),
         nameChannel: "Chuy Almada",
     },
     {
         id: "5",
-        imgVideo: "Imagen Video",
-        titleVideo: "Rutina de ejercicio para PRINCIPIANTES En Casa (20 Minutos) Empieza de cero a hacer ejercicio",
+        imgVideo: require("../assets/miniaturaVideo.png"),
+
+        titleVideo:
+            "Rutina de ejercicio para PRINCIPIANTES En Casa (20 Minutos) Empieza de cero a hacer ejercicio",
         uriVideo: "uriVideo",
-        imgChannel: "Imagen Canal",
+        imgChannel: require("../assets/imagenCanal.png"),
         nameChannel: "Chuy Almada",
     },
     {
         id: "6",
-        imgVideo: "Imagen Video",
-        titleVideo: "Rutina de ejercicio para PRINCIPIANTES En Casa (20 Minutos) Empieza de cero a hacer ejercicio",
+        imgVideo: require("../assets/miniaturaVideo.png"),
+
+        titleVideo:
+            "Rutina de ejercicio para PRINCIPIANTES En Casa (20 Minutos) Empieza de cero a hacer ejercicio",
         uriVideo: "uriVideo",
-        imgChannel: "Imagen Canal",
+        imgChannel: require("../assets/imagenCanal.png"),
         nameChannel: "Chuy Almada",
     },
-
-]
+];
 
 export function Main() {
     const insets = useSafeAreaInsets();
     return (
-        <View style={{ flex: 1, paddingTop: insets.top, paddingBottom: insets.bottom }}>
+        <View
+            style={{
+                flex: 1,
+                paddingTop: insets.top,
+                paddingBottom: insets.bottom,
+            }}
+        >
             {/* Componente Scroll-video */}
             <FlatList
                 data={videos}
@@ -66,9 +80,7 @@ export function Main() {
                 renderItem={({ item }) => <VideoCard video={item} />}
             />
         </View>
-    )
+    );
 }
 
-const styles = StyleSheet.create({
-
-})
+const styles = StyleSheet.create({});

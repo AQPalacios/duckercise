@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from 'react-native'
+import { Pressable, StyleSheet, Text, View } from 'react-native'
 import { HomeIcon, PlusIcon, GymIcon, UserIcon, HealIcon } from "../../components/Icons";
 
 import React from 'react'
@@ -10,24 +10,51 @@ export default function TabsLayout() {
             screenOptions={{
                 headerShown: false,
                 tabBarActiveTintColor: "#071427",
+                tabBarStyle: {
+                    borderTopWidth: 0,
+                    padding: 0,
+                    margin: 0,
+                    paddingTop: 6,
+                },
+                tabBarShowLabel: false
             }}
         >
-
             <Tabs.Screen
                 name="index"
                 options={{
                     title: "Inicio",
-                    tabBarIcon: ({ color }) => <HomeIcon color={color} />,
+                    tabBarIcon: ({ color }) => (
+                        <View style={{
+                            flex: 1,
+                            justifyContent: "center",
+                            alignItems: "center",
+                            height: 30,
+                            width: 30,
+                        }}>
+                            <HomeIcon color={color} />
+                        </View>
+                    ),
                     header: () => <Header />,
-                    headerShown: true
+                    headerShown: true,
                 }}
             />
+
             <Tabs.Screen
                 name="heal"
                 options={{
                     title: "Doctor",
-                    tabBarIcon: ({ color }) => <HealIcon color={color} />,
-                    header: () => <Header /> ,
+                    tabBarIcon: ({ color }) => (
+                        <View style={{
+                            flex: 1,
+                            justifyContent: "center",
+                            alignItems: "center",
+                            height: 30,
+                            width: 30,
+                        }}>
+                            <HealIcon color={color} />
+                        </View>
+                    ),
+                    header: () => <Header />,
                     headerShown: true
                 }}
             />
@@ -35,24 +62,54 @@ export default function TabsLayout() {
                 name="addVideo"
                 options={{
                     title: "",
-                    tabBarIcon: ({ color }) => <PlusIcon color={color} />,
-
+                    tabBarIcon: ({ color }) =>
+                        <View style={{
+                            justifyContent: "center",
+                            alignItems: "center",
+                            backgroundColor: "#FEC14A",
+                            borderRadius: 50,
+                            justifyContent: "center",
+                            alignItems: "center",
+                            height: 49,
+                            width: 49,
+                        }}>
+                            <PlusIcon color={color} />
+                        </View>
                 }}
             />
             <Tabs.Screen
                 name="gym"
                 options={{
                     title: "Gimnasios",
-                    tabBarIcon: ({ color }) => <GymIcon color={color} />
-
+                    tabBarIcon: ({ color }) => (
+                        <View style={{
+                            flex: 1,
+                            justifyContent: "center",
+                            alignItems: "center",
+                            height: 30,
+                            width: 40,
+                        }}>
+                            <GymIcon color={color} />
+                        </View>
+                    )
                 }}
             />
             <Tabs.Screen
                 name="profile"
                 options={{
                     title: "Perfil",
-                    tabBarIcon: ({ color }) => <UserIcon color={color} />,
-                    header: () =>  <Header /> ,
+                    tabBarIcon: ({ color }) => (
+                        <View style={{
+                            flex: 1,
+                            justifyContent: "center",
+                            alignItems: "center",
+                            height: 30,
+                            width: 30,
+                        }}>
+                            <UserIcon color={color} />
+                        </View>
+                    ),
+                    header: () => <Header />,
                     headerShown: true
                 }}
             />
