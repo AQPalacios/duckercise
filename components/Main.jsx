@@ -2,6 +2,7 @@ import { StyleSheet, View, FlatList } from "react-native";
 import React from "react";
 import { useSafeAreaInsets } from "react-native-safe-area-context";
 import { VideoCard } from "./VideoCard";
+// npx expo start -c --tunnel // Para iniciar el servidor de expo
 
 const videos = [
     {

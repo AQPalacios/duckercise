@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View, Image, Pressable } from 'react-native'
 import React from 'react'
 import logo from "../assets/duckercise-logo.png"
-import { SearchIcon } from './SearchIcon'
+import { SearchIcon } from './Icons'
 
 export function Header() {
     return (
@@ -14,10 +14,10 @@ export function Header() {
                     justifyContent: "center",
                     gap: 8,
                 }}>
-                    <Image source={logo} style={{ width: 50, height: 50 }} />
+                    <Image source={logo} style={{ width: 40, height: 40 }} />
                     <Text
                         style={{
-                            fontSize: 22
+                            fontSize: 18
                         }}
                     >
                         Duckercise
@@ -41,7 +41,7 @@ export function Header() {
                         width: 25,
                         height: 25
                     }}>
-                        <SearchIcon />
+                        <SearchIcon/>
                     </View>
                 </Pressable>
             </View>

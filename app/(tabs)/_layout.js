@@ -14,9 +14,9 @@ export default function TabsLayout() {
                     borderTopWidth: 0,
                     padding: 0,
                     margin: 0,
-                    paddingTop: 6,
+                    // paddingTop: 4,
                 },
-                tabBarShowLabel: false
+                // tabBarShowLabel: false
             }}
         >
             <Tabs.Screen
@@ -62,6 +62,7 @@ export default function TabsLayout() {
                 name="addVideo"
                 options={{
                     title: "",
+                    tabBarLabel: () => null,
                     tabBarIcon: ({ color }) =>
                         <View style={{
                             justifyContent: "center",
@@ -70,8 +71,9 @@ export default function TabsLayout() {
                             borderRadius: 50,
                             justifyContent: "center",
                             alignItems: "center",
-                            height: 49,
-                            width: 49,
+                            height: 45,
+                            width: 45,
+                            marginBottom: -10
                         }}>
                             <PlusIcon color={color} />
                         </View>

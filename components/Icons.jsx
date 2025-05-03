@@ -27,3 +27,9 @@ export const HealIcon = (props) => {
         <FontAwesome5 name="notes-medical" size={28} color="black" {...props}/>
     );
 };
+
+export const SearchIcon = (props) => {
+    return (
+        <FontAwesome5 name="search" size={24} color="black" {...props}/>
+    );
+};
