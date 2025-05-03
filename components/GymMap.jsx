@@ -12,20 +12,16 @@ import { router } from "expo-router";
 const userIconMap = require("./../assets/user-map.png");
 const GymIconMap = require("./../assets/gym-icon-map.png");
 
-
-
 const polis = {
     poliMao: {
         latitude: 39.88731723084614,
-        longitude: 4.249927681851884,        
+        longitude: 4.249927681851884,
     },
     poliMalbuger: {
         latitude: 39.87819846925615,
-        longitude: 4.252696014828193,        
+        longitude: 4.252696014828193,
     },
-}
-
-
+};
 
 export function GymMap() {
     const [origin, setOrigin] = useState({
@@ -33,10 +29,9 @@ export function GymMap() {
         longitude: 4.254876314979115,
     });
 
-    const [destination, setDestination] = useState({
-        latitude: 39.88119668886889,
-        longitude: 4.252086817727747,
-    });
+    // ({latitude: 39.88119668886889,longitude: 4.252086817727747,}
+
+    const [destination, setDestination] = useState(null);
 
     useEffect(() => {
         obtenerPermisoLocalizacion();
@@ -76,22 +71,29 @@ export function GymMap() {
                     draggable
                     coordinate={origin}
                     image={userIconMap}
-                    onDragEnd={(direction) =>
-                        setOrigin(direction.nativeEvent.coordinate)
-                    }
+                    // onDragEnd={(direction) =>
+                    //     setOrigin(direction.nativeEvent.coordinate)
+                    // }
                 />
 
-                <Marker coordinate={polis.poliMao} image={GymIconMap} />
-                <Marker coordinate={polis.poliMalbuger} image={GymIconMap} />
+                <Marker
+                    coordinate={polis.poliMao}
+                    image={GymIconMap}
+                    onPress={() => setDestination(polis.poliMao)}
+                />
+
+                <Marker
+                    coordinate={polis.poliMalbuger}
+                    image={GymIconMap}
+                    onPress={() => setDestination(polis.poliMalbuger)}
+                />
 
                 <MapViewDirections
                     origin={origin}
                     destination={destination}
-                    // apikey={GOOGLE_MAPS_KEY}
-                    apikey={""}
+                    apikey={GOOGLE_MAPS_KEY}
+                
                 />
-
-                {/* <Polyline coordinates={[origin, destination]} /> */}
             </MapView>
         </View>
     );
