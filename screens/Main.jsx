@@ -1,7 +1,5 @@
 import { StyleSheet, View, FlatList } from "react-native";
-import React from "react";
-import { useSafeAreaInsets } from "react-native-safe-area-context";
-import { VideoCard } from "./VideoCard";
+import { VideoCard } from "../components/VideoCard";
 // npx expo start -c --tunnel // Para iniciar el servidor de expo
 
 const videos = [
@@ -65,13 +63,11 @@ const videos = [
 ];
 
 export function Main() {
-    const insets = useSafeAreaInsets();
     return (
         <View
             style={{
                 flex: 1,
-                paddingTop: insets.top,
-                paddingBottom: insets.bottom,
+                backgroundColor: "#FFFDFA"
             }}
         >
             {/* Componente Scroll-video */}

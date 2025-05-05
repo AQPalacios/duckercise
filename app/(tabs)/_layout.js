@@ -1,7 +1,6 @@
-import { Pressable, StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, View } from 'react-native'
 import { HomeIcon, PlusIcon, GymIcon, UserIcon, HealIcon } from "../../components/Icons";
 
-import React from 'react'
 import { Tabs } from 'expo-router'
 import { Header } from '../../components/Header';
 export default function TabsLayout() {
@@ -14,7 +13,8 @@ export default function TabsLayout() {
                     borderTopWidth: 0,
                     padding: 0,
                     margin: 0,
-                    // paddingTop: 4,
+                    backgroundColor: "#FFFDFA"
+                    // paddingTop: 10,
                 },
                 // tabBarShowLabel: false
             }}

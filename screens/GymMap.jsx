@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
-import MapView, { Marker, Polyline } from "react-native-maps";
+import { StyleSheet, View } from "react-native";
+import MapView, { Marker } from "react-native-maps";
 import MapViewDirections from "react-native-maps-directions";
 import { GOOGLE_MAPS_KEY } from "@env";
 import {
@@ -42,7 +42,7 @@ export function GymMap() {
 
         if (status !== "granted") {
             // alert("Permiso no concedido");
-            router.back();
+            // router.back();
             return;
         }
 
@@ -91,7 +91,9 @@ export function GymMap() {
                 <MapViewDirections
                     origin={origin}
                     destination={destination}
-                    apikey={GOOGLE_MAPS_KEY}
+                    // apikey={GOOGLE_MAPS_KEY}
+                    apikey=""
+
                 
                 />
             </MapView>
