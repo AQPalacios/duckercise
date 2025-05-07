@@ -1,5 +1,5 @@
 import { StyleSheet, View } from 'react-native'
-import { HomeIcon, PlusIcon, GymIcon, UserIcon, HealIcon } from "../../components/Icons";
+import { HomeIcon, PlusIcon, GymIcon, UserIcon, HealIcon, MapIcon } from "../../components/Icons";
 
 import { Tabs } from 'expo-router'
 import { Header } from '../../components/Header';
@@ -82,7 +82,7 @@ export default function TabsLayout() {
             <Tabs.Screen
                 name="gym"
                 options={{
-                    title: "Gimnasios",
+                    title: "Mapa",
                     tabBarIcon: ({ color }) => (
                         <View style={{
                             flex: 1,
@@ -91,7 +91,7 @@ export default function TabsLayout() {
                             height: 30,
                             width: 40,
                         }}>
-                            <GymIcon color={color} />
+                            <MapIcon color={color}/>
                         </View>
                     )
                 }}
