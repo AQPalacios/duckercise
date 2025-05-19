@@ -124,7 +124,17 @@ export function ProfileScreen() {
 
                 {/* Botones para cambiar los videos  */}
                 <View>
-                    <View style={{ flexDirection: "row", justifyContent: "space-evenly", alignItems: "center", gap: "4", borderBottomColor: "#A1A1A1", borderBottomWidth: .2, padding: 8, borderTopWidth: .2, borderTopColor: "#A1A1A1" }}>
+                    <View style={{ 
+                        flexDirection: "row", 
+                        justifyContent: "space-evenly", 
+                        alignItems: "center", 
+                        gap: "4", 
+                        borderBottomColor: "#A1A1A1", 
+                        borderBottomWidth: .2, 
+                        padding: 8, 
+                        borderTopWidth: .2, 
+                        borderTopColor: "#A1A1A1" 
+                    }}>
                         <Pressable>
                             <View style={{ padding: 4 }}>
                                 <UploadIcon color={"#A1A1A1"} size={32} />
@@ -140,10 +150,8 @@ export function ProfileScreen() {
                                 <BookMarkIcon color={"#A1A1A1"} size={32} />
                             </View>
                         </Pressable>
-
                     </View>
                 </View>
-
             </View>
             
             {/* Lista de videos del usuario */}

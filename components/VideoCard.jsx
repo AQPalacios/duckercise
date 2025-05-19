@@ -1,7 +1,5 @@
 import { StyleSheet, Text, View, Pressable, Image } from 'react-native'
-import React from 'react'
-import logo from "../assets/duckercise-logo.png"
-import { Link } from 'expo-router'
+
 
 export function VideoCard({ video }) {
     return (

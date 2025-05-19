@@ -7,7 +7,6 @@ import {
     getCurrentPositionAsync,
     requestForegroundPermissionsAsync,
 } from "expo-location";
-import { router } from "expo-router";
 
 const userIconMap = require("./../assets/user-map.png");
 const GymIconMap = require("./../assets/gym-icon-map.png");
@@ -28,8 +27,6 @@ export function GymMap() {
         latitude: 39.88755642288377,
         longitude: 4.254876314979115,
     });
-
-    // ({latitude: 39.88119668886889,longitude: 4.252086817727747,}
 
     const [destination, setDestination] = useState(null);
 
@@ -71,30 +68,22 @@ export function GymMap() {
                     draggable
                     coordinate={origin}
                     image={userIconMap}
-                    // onDragEnd={(direction) =>
-                    //     setOrigin(direction.nativeEvent.coordinate)
-                    // }
                 />
-
                 <Marker
                     coordinate={polis.poliMao}
                     image={GymIconMap}
                     onPress={() => setDestination(polis.poliMao)}
                 />
-
                 <Marker
                     coordinate={polis.poliMalbuger}
                     image={GymIconMap}
                     onPress={() => setDestination(polis.poliMalbuger)}
                 />
-
                 <MapViewDirections
                     origin={origin}
                     destination={destination}
                     // apikey={GOOGLE_MAPS_KEY}
                     apikey=""
-
-                
                 />
             </MapView>
         </View>
