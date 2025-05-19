@@ -1,11 +1,10 @@
 import { StyleSheet, Text, View } from 'react-native'
+import UploadVideoScreen from '../../screens/UploadVideoScreen'
 
 export default function addVideo() {
-  return (
-    <View>
-      <Text>addVideo</Text>
-    </View>
-  )
+    return (
+        <UploadVideoScreen />
+    )
 }
 
 const styles = StyleSheet.create({})
