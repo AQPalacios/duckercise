@@ -7,11 +7,12 @@ import {
     FlatList,
     TouchableOpacity,
 } from "react-native";
+import { useRouter } from "expo-router";
+import { useState } from "react";
+
 import logo from "../assets/duckercise-logo.png";
 import { BookMarkIcon, LikeIcon, UploadIcon } from "../components/Icons";
-import { VideoCard } from "../components/VideoCard";
 import { VideoCardProfileScreen } from "../components/VideoCardProfileScreen";
-import { useState } from "react";
 // const photo = require("./../assets/duckercise-logo.png")
 
 const videos = [
@@ -108,6 +109,7 @@ const likedVideos = [...videos.slice(0, 3)]; // solo algunos
 const savedVideos = [...videos.slice(4, 7)]; // otros
 
 export function ProfileScreen() {
+    const router = useRouter();
     const [botonActivo, setBotonActivo] = useState("uploaded");
 
     let videoData = uploadedVideos;
@@ -120,7 +122,7 @@ export function ProfileScreen() {
             <View style={styles.profileCard}>
                 <Image source={logo} style={{ width: 80, height: 80 }} />
                 <Text style={{ fontSize: 18, fontWeight: "bold" }}>
-                    @AlvaroAdmin
+                    @Miquel Petrus
                 </Text>
             </View>
 
@@ -134,9 +136,10 @@ export function ProfileScreen() {
                         marginBottom: 12,
                     }}
                 >
+
                     <TouchableOpacity
                         onPress={() => {
-                            console.log("hola");
+                            router.push("/following");
                         }}
                         activeOpacity={0.4}
                     >
@@ -146,9 +149,7 @@ export function ProfileScreen() {
                         </View>
                     </TouchableOpacity>
                     <TouchableOpacity
-                        onPress={() => {
-                            console.log("hola");
-                        }}
+                        onPress={() => router.push("/(stack)/followers")}
                         activeOpacity={0.4}
                     >
                         <View>
@@ -177,9 +178,9 @@ export function ProfileScreen() {
                             onPress={() => setBotonActivo("uploaded")}
                         >
                             <View style={{ padding: 4 }}>
-                                <UploadIcon 
+                                <UploadIcon
                                     color={botonActivo === "uploaded" ? "#131515" : "#A1A1A1"}
-                                    size={32} 
+                                    size={32}
                                 />
                             </View>
                         </Pressable>
@@ -188,9 +189,9 @@ export function ProfileScreen() {
                             onPress={() => setBotonActivo("liked")}
                         >
                             <View style={{ padding: 4 }}>
-                                <LikeIcon 
+                                <LikeIcon
                                     color={botonActivo === "liked" ? "#131515" : "#A1A1A1"}
-                                    size={32} 
+                                    size={32}
                                 />
                             </View>
                         </Pressable>
@@ -199,9 +200,9 @@ export function ProfileScreen() {
                             onPress={() => setBotonActivo("saved")}
                         >
                             <View style={{ padding: 4 }}>
-                                <BookMarkIcon 
+                                <BookMarkIcon
                                     color={botonActivo === "saved" ? "#131515" : "#A1A1A1"}
-                                    size={32} 
+                                    size={32}
                                 />
                             </View>
                         </Pressable>

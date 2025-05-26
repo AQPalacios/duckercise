@@ -1,10 +1,13 @@
-import { StyleSheet, Text, View, Pressable, Image } from 'react-native'
+import { StyleSheet, Text, View, Pressable, Image, TouchableOpacity } from 'react-native'
 
 
 export function VideoCard({ video }) {
     return (
         // <Link href={"/ProfileScreen"} style={{flex: 1}} asChild>
-            <Pressable style={styles.componentVideo}>
+            <TouchableOpacity
+                activeOpacity={.7}
+                style={styles.componentVideo}
+            >
                 {/* Imagen del video */}
                 <View style={{
                     flex: 3,
@@ -39,7 +42,7 @@ export function VideoCard({ video }) {
                         </Text>
                     </View>
                 </View>
-            </Pressable>
+            </TouchableOpacity>
         // </Link>
 
     )

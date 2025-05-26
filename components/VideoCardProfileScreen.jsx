@@ -1,8 +1,10 @@
-import { Image, Pressable, StyleSheet, Text, View } from 'react-native'
+import { Image, Pressable, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 
 export function VideoCardProfileScreen({ video }) {
     return (
-        <Pressable>
+        <TouchableOpacity
+            activeOpacity={.7}
+        >
             <View style={{
                 borderRadius: 5,
                 overflow: "hidden",
@@ -28,7 +30,7 @@ export function VideoCardProfileScreen({ video }) {
                     }}
                 >
                     <Text
-                        style={{ fontSize: 14}}
+                        style={{ fontSize: 14 }}
                         numberOfLines={2}
                         ellipsizeMode="tail"
                     >
@@ -39,7 +41,7 @@ export function VideoCardProfileScreen({ video }) {
                     </Text>
                 </View>
             </View>
-        </Pressable>
+        </TouchableOpacity>
     )
 }
 
