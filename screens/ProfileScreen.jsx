@@ -139,7 +139,7 @@ export function ProfileScreen() {
 
                     <TouchableOpacity
                         onPress={() => {
-                            router.push("/following");
+                            router.push("/(stack)/following");
                         }}
                         activeOpacity={0.4}
                     >
