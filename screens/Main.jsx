@@ -8,7 +8,7 @@ const videos = [
         imgVideo: require("../assets/miniaturaVideo.png"),
         titleVideo:
             "Rutina de ejercicio para PRINCIPIANTES En Casa (20 Minutos) Empieza de cero a hacer ejercicio",
-        uriVideo: "uriVideo",
+        uriVideo: require("../assets/BLACK SABBATH-Paranoid.mp4"),
         imgChannel: require("../assets/imagenCanal.png"),
         nameChannel: "Chuy Almada",
     },
@@ -33,7 +33,6 @@ const videos = [
     {
         id: "4",
         imgVideo: require("../assets/miniaturaVideo.png"),
-
         titleVideo:
             "Rutina de ejercicio para PRINCIPIANTES En Casa (20 Minutos) Empieza de cero a hacer ejercicio",
         uriVideo: "uriVideo",
@@ -53,7 +52,6 @@ const videos = [
     {
         id: "6",
         imgVideo: require("../assets/miniaturaVideo.png"),
-
         titleVideo:
             "Rutina de ejercicio para PRINCIPIANTES En Casa (20 Minutos) Empieza de cero a hacer ejercicio",
         uriVideo: "uriVideo",
@@ -67,7 +65,7 @@ export function Main() {
         <View
             style={{
                 flex: 1,
-                backgroundColor: "#FFFDFA"
+                backgroundColor: "#FFFDFA",
             }}
         >
             {/* Componente Scroll-video */}
