@@ -38,7 +38,7 @@ export default function VideoDetailScreen() {
                         player={player}
                         allowsFullscreen
                         allowsPictureInPicture
-                        style={{ width: "100%", height: 240 }}
+                        style={{ width: "100%", height: 230 }}
                     />
                 </View>
                 <View></View>
