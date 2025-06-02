@@ -55,3 +55,15 @@ export const UploadIcon = (props) => {
         <FontAwesome name="upload" size={28} color="black" {...props}/>
     );
 };
+
+export const ShareIcon = (props) => {
+    return (
+       <FontAwesome name="share" size={24} color="black" {...props}/>
+    );
+};
+
+export const FloppyIcon = (props) => {
+    return (
+       <FontAwesome6 name="floppy-disk" size={24} color="black" {...props}/>
+    );
+};
