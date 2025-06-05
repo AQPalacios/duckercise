@@ -79,7 +79,6 @@ export default function VideoDetailScreen() {
         }, [])
     );
 
-
     return (
         <View style={styles.container}>
             <View>
