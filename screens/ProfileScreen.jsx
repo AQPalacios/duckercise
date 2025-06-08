@@ -122,7 +122,7 @@ export function ProfileScreen() {
             <View style={styles.profileCard}>
                 <Image source={logo} style={{ width: 80, height: 80 }} />
                 <Text style={{ fontSize: 18, fontWeight: "bold" }}>
-                    @Miquel Petrus
+                    @Duckercise
                 </Text>
             </View>
 
@@ -144,7 +144,7 @@ export function ProfileScreen() {
                         activeOpacity={0.4}
                     >
                         <View>
-                            <Text style={styles.textNumber}>207</Text>
+                            <Text style={styles.textNumber}>1</Text>
                             <Text style={{ color: "#A1A1A1" }}>Siguiendo</Text>
                         </View>
                     </TouchableOpacity>
@@ -153,7 +153,7 @@ export function ProfileScreen() {
                         activeOpacity={0.4}
                     >
                         <View>
-                            <Text style={styles.textNumber}>4</Text>
+                            <Text style={styles.textNumber}>0</Text>
                             <Text style={{ color: "#A1A1A1" }}>Seguidores</Text>
                         </View>
                     </TouchableOpacity>

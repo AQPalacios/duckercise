@@ -1,6 +1,12 @@
 // app/video/[id].jsx
 import { useLocalSearchParams } from "expo-router";
-import { View, Text, StyleSheet, TouchableOpacity, FlatList } from "react-native";
+import {
+    View,
+    Text,
+    StyleSheet,
+    TouchableOpacity,
+    FlatList,
+} from "react-native";
 import { useVideo } from "../../context/VideoContext";
 import { Image } from "react-native";
 import { VideoView, useVideoPlayer } from "expo-video";
@@ -93,50 +99,52 @@ export default function VideoDetailScreen() {
             </View>
             <View style={{ padding: 8, gap: 16 }}>
                 <Text style={styles.title}>{titleVideo}</Text>
-                <View style={{
-                    flexDirection: "row",
-                    justifyContent: "space-between",
-                    alignItems: "center"
-                }}>
+                <View
+                    style={{
+                        flexDirection: "row",
+                        justifyContent: "space-between",
+                        alignItems: "center",
+                    }}
+                >
                     <TouchableOpacity
                         style={{
                             flexDirection: "row",
-                            alignItems: "center"
+                            alignItems: "center",
+                            gap: 8 
                         }}
-                        activeOpacity={.7}
+                        activeOpacity={0.7}
                     >
                         <Image
                             source={imgChannel}
-                            width={100}
+                            style={{ width: 50, height: 50 , borderRadius: 25}}
                         />
                         <Text style={{ color: "#1976D2" }}>{nameChannel}</Text>
                     </TouchableOpacity>
                     <TouchableOpacity
                         style={styles.btnSeguir}
-                        activeOpacity={.7}
+                        activeOpacity={0.7}
                     >
-                        <Text style={{ textAlign: "center", fontSize: 18, color: "#fff" }}>Seguir</Text>
+                        <Text
+                            style={{
+                                textAlign: "center",
+                                fontSize: 18,
+                                color: "#fff",
+                            }}
+                        >
+                            Seguir
+                        </Text>
                     </TouchableOpacity>
                 </View>
                 <View style={{ flexDirection: "row", gap: 4 }}>
-                    <TouchableOpacity
-                        style={styles.btns}
-                        activeOpacity={.7}
-                    >
+                    <TouchableOpacity style={styles.btns} activeOpacity={0.7}>
                         <LikeIcon />
                         <Text>145M</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.btns}
-                        activeOpacity={.7}
-                    >
+                    <TouchableOpacity style={styles.btns} activeOpacity={0.7}>
                         <ShareIcon />
                         <Text>Compartir</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity
-                        style={styles.btns}
-                        activeOpacity={.7}
-                    >
+                    <TouchableOpacity style={styles.btns} activeOpacity={0.7}>
                         <FloppyIcon />
                         <Text>Guardar</Text>
                     </TouchableOpacity>
@@ -164,7 +172,7 @@ const styles = StyleSheet.create({
         paddingHorizontal: 40,
         paddingVertical: 8,
         backgroundColor: "#1976D2",
-        borderRadius: 8
+        borderRadius: 8,
     },
     subtitle: { fontSize: 18, marginTop: 10 },
     btns: {
@@ -176,9 +184,9 @@ const styles = StyleSheet.create({
         borderBlockColor: "#A1A1A1",
         paddingHorizontal: 12,
         paddingVertical: 4,
-        borderRadius: 12
+        borderRadius: 12,
     },
     btnText: {
-        color: "#A1A1A1"
-    }
+        color: "#A1A1A1",
+    },
 });

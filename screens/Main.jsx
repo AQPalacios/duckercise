@@ -5,12 +5,12 @@ import { VideoCard } from "../components/VideoCard";
 const videos = [
     {
         id: "1",
-        imgVideo: require("../assets/miniaturaVideo.png"),
+        imgVideo: require("../assets/paranoid-thumb.png"),
         titleVideo:
-            "Rutina de ejercicio para PRINCIPIANTES En Casa (20 Minutos) Empieza de cero a hacer ejercicio",
+            "BLACK SABBATH - Paranoid (Official Video)",
         uriVideo: require("../assets/BLACK SABBATH-Paranoid.mp4"),
-        imgChannel: require("../assets/imagenCanal.png"),
-        nameChannel: "Chuy Almada",
+        imgChannel: require("../assets/BlackSabbath.jpg"),
+        nameChannel: "Black Sabbath",
     },
     {
         id: "2",

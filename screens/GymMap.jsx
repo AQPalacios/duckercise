@@ -82,8 +82,8 @@ export function GymMap() {
                 <MapViewDirections
                     origin={origin}
                     destination={destination}
-                    // apikey={GOOGLE_MAPS_KEY}
-                    apikey=""
+                    apikey={GOOGLE_MAPS_KEY}
+                    // apikey=""
                 />
             </MapView>
         </View>
